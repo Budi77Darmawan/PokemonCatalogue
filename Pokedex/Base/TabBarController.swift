@@ -35,6 +35,8 @@ class TabBarController: UITabBarController {
         homeController.tabBarItem.title = "Home"
         homeController.tabBarItem.image = UIImage(systemName: "house")
         homeController.tabBarItem.selectedImage = UIImage(systemName: "house.fill")
+        let viewModel = HomeViewModel(useCase: Injection().provideHomeUseCase())
+        homeController.viewModel = viewModel
         return homeController
     }
     

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PokemonGridCollectionViewCell: UICollectionViewCell {
     
@@ -26,6 +27,15 @@ class PokemonGridCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func configure(_ pokemon: PokemonModel?) {
+        pokemonNameLabel.text = pokemon?.name?.capitalized
+        pokemonTagLabel.text = pokemon?.tag
+        pokemonImageView.loadImage(uri: pokemon?.imageUri,
+                                   placeholder: getUIImage(named: "pokeball"))
+        pokemonAttribute1Label.text = pokemon?.type?[safe: 0] ?? "-"
+        pokemonAttribute2Label.text = pokemon?.type?[safe: 1] ?? "-"
     }
 
 }
