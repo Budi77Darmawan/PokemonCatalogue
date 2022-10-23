@@ -12,18 +12,19 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var pokemonCollectionView: UICollectionView!
+    private lazy var refreshControl = UIRefreshControl()
     
     private let disposeBag = DisposeBag()
     var viewModel: HomeViewModel!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewDidLoad() {
@@ -40,6 +41,8 @@ class HomeViewController: UIViewController {
             .subscribe(
                 onNext: { value in
                     self.viewModel.searchPokemons(with: value)
+                    let onSearch = !(value?.isEmpty == true)
+                    self.pokemonCollectionView.refreshControl = onSearch ? nil : self.refreshControl
                 }
             ).disposed(by: disposeBag)
     }
@@ -48,9 +51,9 @@ class HomeViewController: UIViewController {
         pokemonCollectionView.register(PokemonGridCollectionViewCell.nib(), forCellWithReuseIdentifier: PokemonGridCollectionViewCell.identifier)
         pokemonCollectionView.delegate = self
         pokemonCollectionView.dataSource = self
-        pokemonCollectionView.refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshCollectionView), for: .valueChanged)
+        pokemonCollectionView.refreshControl = refreshControl
         pokemonCollectionView.refreshControl?.beginRefreshing()
-        pokemonCollectionView.refreshControl?.addTarget(self, action: #selector(refreshCollectionView), for: .valueChanged)
     }
     
     @objc
@@ -92,6 +95,13 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let widthPerItem = collectionView.frame.width / 2 - 5
         return CGSize(width: widthPerItem - 8, height: widthPerItem * 0.6)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.pokemon = viewModel.pokemon(at: indexPath.row)
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

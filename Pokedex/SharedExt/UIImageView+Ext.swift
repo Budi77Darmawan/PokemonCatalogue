@@ -20,3 +20,10 @@ extension UIView {
         return UIImage(named: named) ?? UIImage(systemName: "minus.circle.fill")!
     }
 }
+
+extension UIViewController {
+    func getUIImage(named: String) -> UIImage {
+        return UIImage(named: named) ?? UIImage(systemName: "minus.circle.fill")!
+    }
+}
+

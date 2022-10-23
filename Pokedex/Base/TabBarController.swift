@@ -50,5 +50,6 @@ extension UIViewController: UINavigationControllerDelegate {
             // Fallback on earlier versions
             viewController.navigationItem.backButtonTitle = ""
         }
+        viewController.navigationController?.navigationBar.tintColor = .white
     }
 }

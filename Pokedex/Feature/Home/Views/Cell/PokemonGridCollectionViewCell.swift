@@ -34,8 +34,8 @@ class PokemonGridCollectionViewCell: UICollectionViewCell {
         pokemonTagLabel.text = pokemon?.tag
         pokemonImageView.loadImage(uri: pokemon?.imageUri,
                                    placeholder: getUIImage(named: "pokeball"))
-        pokemonAttribute1Label.text = pokemon?.type?[safe: 0] ?? "-"
-        pokemonAttribute2Label.text = pokemon?.type?[safe: 1] ?? "-"
+        pokemonAttribute1Label.text = pokemon?.types?[safe: 0] ?? "-"
+        pokemonAttribute2Label.text = pokemon?.types?[safe: 1] ?? "-"
     }
 
 }

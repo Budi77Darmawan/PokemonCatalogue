@@ -12,8 +12,12 @@ struct PokemonModel {
     let name: String?
     let speciesId: Int?
     let imageUri: String?
-    var type: [String]?
-    var stat: [Stat]?
+    let height: Int?
+    let weight: Int?
+    var types: [String]?
+    var moves: [String]?
+    var stats: [Stat]?
+    var abilities: [String]?
 }
 
 extension PokemonModel {
