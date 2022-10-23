@@ -11,19 +11,24 @@ import RxSwift
 protocol PokemonRepositoryProtocol {
     func getListPokemonIds(page: Int) -> Observable<[Int]>
     func getPokemonDetails(id: Int) -> Observable<PokemonModel>
+    func getPokemonInCollection(pokemonId: Int) -> Observable<Bool>
+    func addToCollection(pokemon: PokemonModel) -> Observable<Bool>
+    func deleteFromCollection(pokemonId: Int) -> Observable<Bool>
 }
 
 final class PokemonRepository: NSObject {
     
-    typealias PokemonInstance = (RemoteDataSource) -> PokemonRepository
+    typealias PokemonInstance = (RemoteDataSource, LocaleDataSource) -> PokemonRepository
     fileprivate let remote: RemoteDataSource
+    fileprivate let locale: LocaleDataSource
     
-    private init(remoteDataSource: RemoteDataSource) {
+    private init(remoteDataSource: RemoteDataSource, localeDataSource: LocaleDataSource) {
         self.remote = remoteDataSource
+        self.locale = localeDataSource
     }
     
-    static let sharedInstance: PokemonInstance = { remoteData in
-        return PokemonRepository(remoteDataSource: remoteData)
+    static let sharedInstance: PokemonInstance = { remote, local in
+        return PokemonRepository(remoteDataSource: remote, localeDataSource: local)
     }
     
 }
@@ -36,21 +41,20 @@ extension PokemonRepository: PokemonRepositoryProtocol {
     
     func getPokemonDetails(id: Int) -> Observable<PokemonModel> {
         return self.remote.getPokemonDetails(id: id)
-            .map { self.mapPokemonResponseToModel(data: $0) }
+            .map { DataMapper.mapPokemonResponseToModel(data: $0) }
     }
     
-    private func mapPokemonResponseToModel(data: PokemonResponse) -> PokemonModel {
-        return PokemonModel(
-            id: data.id,
-            name: data.name,
-            speciesId: data.species?.id,
-            imageUri: data.imageUri,
-            height: data.height,
-            weight: data.weight,
-            types: data.types?.map { $0.type?.name ?? "" },
-            moves: data.moves?.map { $0.move?.name ?? "" },
-            stats: data.stats,
-            abilities: data.abilities?.map { $0.ability?.name ?? ""}
-        )
+    func getPokemonInCollection(pokemonId: Int) -> Observable<Bool> {
+        return self.locale.getPokemonInCollection(pokemonId: pokemonId)
     }
+    
+    func addToCollection(pokemon: PokemonModel) -> Observable<Bool> {
+        return locale.addToCollection(pokemon: DataMapper.mapPokemonModelToObj(data: pokemon))
+    }
+    
+    func deleteFromCollection(pokemonId: Int) -> Observable<Bool> {
+        return locale.deleteFromCollection(pokemonId: pokemonId)
+    }
+    
+    
 }
