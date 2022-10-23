@@ -25,6 +25,22 @@
 		DB7449092901725700063D57 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7449082901725700063D57 /* UIImageView+Ext.swift */; };
 		DBB634ED290275A5002723F7 /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB634EC290275A5002723F7 /* Collection+Ext.swift */; };
 		DBB634F0290276DD002723F7 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB634EF290276DD002723F7 /* Injection.swift */; };
+		DBB634F52905306C002723F7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB634F32905306C002723F7 /* DetailViewController.swift */; };
+		DBB634F62905306C002723F7 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB634F42905306C002723F7 /* DetailViewController.xib */; };
+		DBB634FD29053DAA002723F7 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB634FC29053DAA002723F7 /* CustomSegmentedControl.swift */; };
+		DBB6350029053FA0002723F7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB634FE29053FA0002723F7 /* AboutViewController.swift */; };
+		DBB6350129053FA0002723F7 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB634FF29053FA0002723F7 /* AboutViewController.xib */; };
+		DBB6350429053FBC002723F7 /* BaseStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB6350229053FBC002723F7 /* BaseStatsViewController.swift */; };
+		DBB6350529053FBC002723F7 /* BaseStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB6350329053FBC002723F7 /* BaseStatsViewController.xib */; };
+		DBB6350C29053FF9002723F7 /* MovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB6350A29053FF9002723F7 /* MovesViewController.swift */; };
+		DBB6350D29053FF9002723F7 /* MovesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB6350B29053FF9002723F7 /* MovesViewController.xib */; };
+		DBB63514290561E3002723F7 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB63513290561E3002723F7 /* UIView+Ext.swift */; };
+		DBB6351829056FFF002723F7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DBB6351729056FFF002723F7 /* Lottie */; };
+		DBB6351B2905705A002723F7 /* pokeball_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = DBB6351A29057059002723F7 /* pokeball_loading.json */; };
+		DBB6351D290576E2002723F7 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB6351C290576E2002723F7 /* UIButton+Ext.swift */; };
+		DBB6351F29058DF7002723F7 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB6351E29058DF7002723F7 /* AppColor.swift */; };
+		DBB6352529059A00002723F7 /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB6352329059A00002723F7 /* StatisticTableViewCell.swift */; };
+		DBB6352629059A00002723F7 /* StatisticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB6352429059A00002723F7 /* StatisticTableViewCell.xib */; };
 		DBD1407628F69BD60064FD67 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DBD1407528F69BD60064FD67 /* Alamofire */; };
 		DBD1407928F69C240064FD67 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = DBD1407828F69C240064FD67 /* RxBlocking */; };
 		DBD1407B28F69C240064FD67 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DBD1407A28F69C240064FD67 /* RxCocoa */; };
@@ -60,6 +76,21 @@
 		DB7449082901725700063D57 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		DBB634EC290275A5002723F7 /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
 		DBB634EF290276DD002723F7 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		DBB634F32905306C002723F7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DBB634F42905306C002723F7 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		DBB634FC29053DAA002723F7 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		DBB634FE29053FA0002723F7 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		DBB634FF29053FA0002723F7 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		DBB6350229053FBC002723F7 /* BaseStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStatsViewController.swift; sourceTree = "<group>"; };
+		DBB6350329053FBC002723F7 /* BaseStatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseStatsViewController.xib; sourceTree = "<group>"; };
+		DBB6350A29053FF9002723F7 /* MovesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesViewController.swift; sourceTree = "<group>"; };
+		DBB6350B29053FF9002723F7 /* MovesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovesViewController.xib; sourceTree = "<group>"; };
+		DBB63513290561E3002723F7 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		DBB6351A29057059002723F7 /* pokeball_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pokeball_loading.json; sourceTree = "<group>"; };
+		DBB6351C290576E2002723F7 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		DBB6351E29058DF7002723F7 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		DBB6352329059A00002723F7 /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
+		DBB6352429059A00002723F7 /* StatisticTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticTableViewCell.xib; sourceTree = "<group>"; };
 		DBD1408128F69CE00064FD67 /* ConstServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstServices.swift; sourceTree = "<group>"; };
 		DBD1408428F69DAD0064FD67 /* PokemonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonResponse.swift; sourceTree = "<group>"; };
 		DBD1408628F6A2220064FD67 /* BasicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicResponse.swift; sourceTree = "<group>"; };
@@ -76,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB74490229012A3F00063D57 /* SDWebImage in Frameworks */,
+				DBB6351829056FFF002723F7 /* Lottie in Frameworks */,
 				DBD1407B28F69C240064FD67 /* RxCocoa in Frameworks */,
 				DBD1407628F69BD60064FD67 /* Alamofire in Frameworks */,
 				DBD1407F28F69C240064FD67 /* RxSwift in Frameworks */,
@@ -114,6 +146,7 @@
 				DBD1408028F69CC70064FD67 /* Networking */,
 				DB1D3D9028F5C2D100D6E9DB /* Base */,
 				DB1D3D9128F5C2F100D6E9DB /* Feature */,
+				DBB634FC29053DAA002723F7 /* CustomSegmentedControl.swift */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -132,6 +165,7 @@
 		DB1D3D9128F5C2F100D6E9DB /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				DBB634F129053044002723F7 /* Detail */,
 				DB1D3D9228F5C2FB00D6E9DB /* Home */,
 			);
 			path = Feature;
@@ -169,8 +203,10 @@
 		DB7448F92901090400063D57 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				DBB6351929057035002723F7 /* Assetss */,
 				DB1D3D7E28F5AE2E00D6E9DB /* Assets.xcassets */,
 				DB1D3D7B28F5AE2C00D6E9DB /* Pokedex.xcdatamodeld */,
+				DBB6351E29058DF7002723F7 /* AppColor.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -197,6 +233,8 @@
 				DB74490629015A5B00063D57 /* UICollectionView+Ext.swift */,
 				DB7449082901725700063D57 /* UIImageView+Ext.swift */,
 				DBB634EC290275A5002723F7 /* Collection+Ext.swift */,
+				DBB63513290561E3002723F7 /* UIView+Ext.swift */,
+				DBB6351C290576E2002723F7 /* UIButton+Ext.swift */,
 			);
 			path = SharedExt;
 			sourceTree = "<group>";
@@ -207,6 +245,79 @@
 				DBB634EF290276DD002723F7 /* Injection.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		DBB634F129053044002723F7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DBB634F22905304C002723F7 /* Views */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		DBB634F22905304C002723F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBB6350E29054817002723F7 /* SegmentedController */,
+				DBB634F32905306C002723F7 /* DetailViewController.swift */,
+				DBB634F42905306C002723F7 /* DetailViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBB6350E29054817002723F7 /* SegmentedController */ = {
+			isa = PBXGroup;
+			children = (
+				DBB63520290599B1002723F7 /* About */,
+				DBB63521290599BA002723F7 /* BaseStats */,
+				DBB63522290599CF002723F7 /* Moves */,
+			);
+			path = SegmentedController;
+			sourceTree = "<group>";
+		};
+		DBB6351929057035002723F7 /* Assetss */ = {
+			isa = PBXGroup;
+			children = (
+				DBB6351A29057059002723F7 /* pokeball_loading.json */,
+			);
+			path = Assetss;
+			sourceTree = "<group>";
+		};
+		DBB63520290599B1002723F7 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				DBB634FE29053FA0002723F7 /* AboutViewController.swift */,
+				DBB634FF29053FA0002723F7 /* AboutViewController.xib */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		DBB63521290599BA002723F7 /* BaseStats */ = {
+			isa = PBXGroup;
+			children = (
+				DBB6352729059A29002723F7 /* Cell */,
+				DBB6350229053FBC002723F7 /* BaseStatsViewController.swift */,
+				DBB6350329053FBC002723F7 /* BaseStatsViewController.xib */,
+			);
+			path = BaseStats;
+			sourceTree = "<group>";
+		};
+		DBB63522290599CF002723F7 /* Moves */ = {
+			isa = PBXGroup;
+			children = (
+				DBB6350A29053FF9002723F7 /* MovesViewController.swift */,
+				DBB6350B29053FF9002723F7 /* MovesViewController.xib */,
+			);
+			path = Moves;
+			sourceTree = "<group>";
+		};
+		DBB6352729059A29002723F7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DBB6352329059A00002723F7 /* StatisticTableViewCell.swift */,
+				DBB6352429059A00002723F7 /* StatisticTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DBD1408028F69CC70064FD67 /* Networking */ = {
@@ -279,6 +390,7 @@
 				DBD1407C28F69C240064FD67 /* RxRelay */,
 				DBD1407E28F69C240064FD67 /* RxSwift */,
 				DB74490129012A3F00063D57 /* SDWebImage */,
+				DBB6351729056FFF002723F7 /* Lottie */,
 			);
 			productName = Pokedex;
 			productReference = DB1D3D6F28F5AE2C00D6E9DB /* Pokedex.app */;
@@ -312,6 +424,7 @@
 				DBD1407428F69BD60064FD67 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DBD1407728F69C240064FD67 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				DB74490029012A3F00063D57 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				DBB6351629056FFF002723F7 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = DB1D3D7028F5AE2C00D6E9DB /* Products */;
 			projectDirPath = "";
@@ -327,9 +440,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB6351B2905705A002723F7 /* pokeball_loading.json in Resources */,
+				DBB6350529053FBC002723F7 /* BaseStatsViewController.xib in Resources */,
 				DB3A82E028F5CA0F002E5729 /* PokemonGridCollectionViewCell.xib in Resources */,
 				DB1D3D8228F5AE2E00D6E9DB /* LaunchScreen.storyboard in Resources */,
+				DBB634F62905306C002723F7 /* DetailViewController.xib in Resources */,
 				DB1D3D7F28F5AE2E00D6E9DB /* Assets.xcassets in Resources */,
+				DBB6350D29053FF9002723F7 /* MovesViewController.xib in Resources */,
+				DBB6350129053FA0002723F7 /* AboutViewController.xib in Resources */,
+				DBB6352629059A00002723F7 /* StatisticTableViewCell.xib in Resources */,
 				DB3A82DB28F5C373002E5729 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,23 +463,32 @@
 				DBB634F0290276DD002723F7 /* Injection.swift in Sources */,
 				DBD1408D28F6C4B50064FD67 /* APIManager.swift in Sources */,
 				DBD1408528F69DAD0064FD67 /* PokemonResponse.swift in Sources */,
+				DBB6350429053FBC002723F7 /* BaseStatsViewController.swift in Sources */,
+				DBB63514290561E3002723F7 /* UIView+Ext.swift in Sources */,
 				DB744904290154AD00063D57 /* BaseViewModel.swift in Sources */,
+				DBB6350C29053FF9002723F7 /* MovesViewController.swift in Sources */,
 				DBD1408228F69CE00064FD67 /* ConstServices.swift in Sources */,
 				DB7449092901725700063D57 /* UIImageView+Ext.swift in Sources */,
 				DBD1409128F6C8D70064FD67 /* PokemonRepository.swift in Sources */,
 				DB3A82DA28F5C373002E5729 /* HomeViewController.swift in Sources */,
+				DBB6351F29058DF7002723F7 /* AppColor.swift in Sources */,
 				DBD1408928F6A33B0064FD67 /* PokemonModel.swift in Sources */,
 				DB1D3D7D28F5AE2C00D6E9DB /* Pokedex.xcdatamodeld in Sources */,
 				DB1D3D7328F5AE2C00D6E9DB /* AppDelegate.swift in Sources */,
+				DBB634F52905306C002723F7 /* DetailViewController.swift in Sources */,
+				DBB634FD29053DAA002723F7 /* CustomSegmentedControl.swift in Sources */,
 				DBD1409428F6C9600064FD67 /* RemoteDataSource.swift in Sources */,
 				DB1D3D7528F5AE2C00D6E9DB /* SceneDelegate.swift in Sources */,
 				DBD1408B28F6AE010064FD67 /* PokemonSpeciesResponse.swift in Sources */,
 				DB3A82DF28F5CA0F002E5729 /* PokemonGridCollectionViewCell.swift in Sources */,
+				DBB6350029053FA0002723F7 /* AboutViewController.swift in Sources */,
 				DBD1408728F6A2220064FD67 /* BasicResponse.swift in Sources */,
 				DBB634ED290275A5002723F7 /* Collection+Ext.swift in Sources */,
 				DB7448FC290116CC00063D57 /* HomeViewModel.swift in Sources */,
 				DB7448FF2901170300063D57 /* HomeUseCase.swift in Sources */,
+				DBB6352529059A00002723F7 /* StatisticTableViewCell.swift in Sources */,
 				DB74490729015A5B00063D57 /* UICollectionView+Ext.swift in Sources */,
+				DBB6351D290576E2002723F7 /* UIButton+Ext.swift in Sources */,
 				DB1D3D8F28F5C16C00D6E9DB /* TabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +715,14 @@
 				minimumVersion = 5.1.0;
 			};
 		};
+		DBB6351629056FFF002723F7 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		DBD1407428F69BD60064FD67 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -610,6 +746,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DB74490029012A3F00063D57 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		DBB6351729056FFF002723F7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBB6351629056FFF002723F7 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		DBD1407528F69BD60064FD67 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

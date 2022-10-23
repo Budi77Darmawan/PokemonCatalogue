@@ -45,8 +45,12 @@ extension PokemonRepository: PokemonRepositoryProtocol {
             name: data.name,
             speciesId: data.species?.id,
             imageUri: data.imageUri,
-            type: data.types.map { $0.type?.name ?? "" },
-            stat: data.stats
+            height: data.height,
+            weight: data.weight,
+            types: data.types?.map { $0.type?.name ?? "" },
+            moves: data.moves?.map { $0.move?.name ?? "" },
+            stats: data.stats,
+            abilities: data.abilities?.map { $0.ability?.name ?? ""}
         )
     }
 }

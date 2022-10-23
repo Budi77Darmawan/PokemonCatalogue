@@ -20,8 +20,9 @@ struct PokemonResponse: Decodable {
     let id: Int?
     let name: String?
     let species: BasicResponse?
-    let stats: [Stat]
-    let types: [Types]
+    let stats: [Stat]?
+    let types: [Types]?
+    let moves: [Moves]?
     let height: Int?
     let weight: Int?
     
@@ -57,4 +58,8 @@ struct Stat: Codable {
 struct Types: Codable {
     let slot: Int?
     let type: BasicResponse?
+}
+
+struct Moves: Codable {
+    let move: BasicResponse?
 }
