@@ -96,12 +96,9 @@ extension DetailViewController: CustomSegmentedControlDelegate {
     func change(to index: Int) {
         removeChilds()
         switch index {
-        case 0:
-            addChildVC(aboutVC)
-        case 1:
-            addChildVC(baseStatsVC)
-        case 2:
-            addChildVC(movesVC)
+        case 0: addChildVC(aboutVC)
+        case 1: addChildVC(baseStatsVC)
+        case 2: addChildVC(movesVC)
         default: break
         }
     }
