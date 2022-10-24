@@ -99,7 +99,9 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = DetailViewController()
-        vc.pokemon = viewModel.pokemon(at: indexPath.row)
+        let viewModel = DetailViewModel(useCase: Injection().provideDetailUeCase(),
+                                        pokemon: viewModel.pokemon(at: indexPath.row))
+        vc.viewModel = viewModel
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

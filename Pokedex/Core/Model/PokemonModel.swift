@@ -18,6 +18,7 @@ struct PokemonModel {
     var moves: [String]?
     var stats: [Stat]?
     var abilities: [String]?
+    var nickName: String? = "-"
 }
 
 extension PokemonModel {
