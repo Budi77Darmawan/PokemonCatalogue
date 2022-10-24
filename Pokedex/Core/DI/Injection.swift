@@ -18,6 +18,11 @@ final class Injection {
         let remoteRepo = provideRepository()
         return DetailUseCase(repository: remoteRepo)
     }
+    
+    func provideMyCollectionlUeCase() -> MyCollectionUseCaseProtocol {
+        let remoteRepo = provideRepository()
+        return MyCollectionUseCase(repository: remoteRepo)
+    }
 }
 
 extension Injection {

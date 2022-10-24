@@ -17,7 +17,8 @@ class TabBarController: UITabBarController {
     
     func makeTabBar() -> TabBarController {
         self.viewControllers = [
-            makeNavigation(viewController: createHomeTab())
+            makeNavigation(viewController: createHomeTab()),
+            makeNavigation(viewController: createMyCollectionTab())
         ]
         return self
     }
@@ -38,6 +39,16 @@ class TabBarController: UITabBarController {
         let viewModel = HomeViewModel(useCase: Injection().provideHomeUseCase())
         homeController.viewModel = viewModel
         return homeController
+    }
+    
+    private func createMyCollectionTab() -> UIViewController {
+        let myCollectionController = MyCollectionViewController()
+        myCollectionController.tabBarItem.title = "MyCollection"
+        myCollectionController.tabBarItem.image = UIImage(systemName: "bookmark")
+        myCollectionController.tabBarItem.selectedImage = UIImage(systemName: "bookmark.fill")
+        let viewModel = MyCollectionViewModel(useCase: Injection().provideMyCollectionlUeCase())
+        myCollectionController.viewModel = viewModel
+        return myCollectionController
     }
     
 }

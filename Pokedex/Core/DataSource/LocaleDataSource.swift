@@ -13,6 +13,7 @@ protocol LocaleDataSourceProtocol: AnyObject {
     func getPokemonInCollection(pokemonId: Int) -> Observable<Bool>
     func addToCollection(pokemon: ObjPokemonModel) -> Observable<Bool>
     func deleteFromCollection(pokemonId: Int) -> Observable<Bool>
+    func getCollection() -> Observable<Results<ObjPokemonModel>>
 }
 
 final class LocaleDataSource: NSObject {
@@ -78,6 +79,24 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
                             observer.onNext(true)
                             observer.onCompleted()
                         }
+                    }
+                } catch {
+                    observer.onError(DatabaseError.requestFailed)
+                }
+            } else {
+                observer.onError(DatabaseError.invalidInstance)
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func getCollection() -> Observable<Results<ObjPokemonModel>> {
+        return Observable<Results<ObjPokemonModel>>.create { observer in
+            if let realm = self.realm {
+                do {
+                    try realm.write {
+                        observer.onNext(realm.objects(ObjPokemonModel.self))
+                        observer.onCompleted()
                     }
                 } catch {
                     observer.onError(DatabaseError.requestFailed)

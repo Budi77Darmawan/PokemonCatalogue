@@ -14,6 +14,7 @@ protocol PokemonRepositoryProtocol {
     func getPokemonInCollection(pokemonId: Int) -> Observable<Bool>
     func addToCollection(pokemon: PokemonModel) -> Observable<Bool>
     func deleteFromCollection(pokemonId: Int) -> Observable<Bool>
+    func getCollection() -> Observable<[PokemonModel]>
 }
 
 final class PokemonRepository: NSObject {
@@ -56,5 +57,9 @@ extension PokemonRepository: PokemonRepositoryProtocol {
         return locale.deleteFromCollection(pokemonId: pokemonId)
     }
     
+    func getCollection() -> Observable<[PokemonModel]> {
+        return locale.getCollection()
+            .map { DataMapper.mapListObjPokemonToListModel(array: $0) }
+    }
     
 }

@@ -36,10 +36,7 @@ class HomeViewModel: BaseViewModel {
     }
     
     func pokemon(at index: Int) -> PokemonModel? {
-        if index < _pokemons.value.count {
-            return _pokemons.value[index]
-        }
-        return nil
+        return _pokemons.value[safe: index]
     }
     
     func refresh() {

@@ -19,7 +19,6 @@ struct PokemonModel {
     var stats: [Stat]?
     var abilities: [String]?
     var nickName: String? = "-"
-    var isCatched: Bool = false
 }
 
 extension PokemonModel {

@@ -45,4 +45,20 @@ final class DataMapper {
         result.stats = stats
         return result
     }
+    
+    static func mapListObjPokemonToListModel(array: Results<ObjPokemonModel>) -> [PokemonModel] {
+        return array.map {
+            mapObjPokemonToModel(data: $0)
+        }
+    }
+    
+    static func mapObjPokemonToModel(data: ObjPokemonModel) -> PokemonModel {
+        let types: [String] = data.types.map { $0 }
+        let moves: [String] = data.moves.map { $0 }
+        let abilities: [String] = data.abilities.map { $0 }
+        let stats: [Stat] = data.stats.map {
+            Stat(baseStat: $0.baseStat, effort: 0, stat: BasicResponse(name: $0.stat?.name, url: $0.stat?.url))
+        }
+        return PokemonModel(id: data.id, name: data.name, speciesId: data.speciesId, imageUri: data.imageUri, height: data.height, weight: data.weight, types: types, moves: moves, stats: stats, abilities: abilities, nickName: data.nickname)
+    }
 }
